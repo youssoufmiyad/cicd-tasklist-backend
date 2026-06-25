@@ -20,6 +20,7 @@ export async function getTaskById(req: Request, res: Response): Promise<void> {
     }
 
     const task = await taskService.findById(id);
+    console.log(task)
     if (!task) {
       res.status(404).json({ error: "Task not found" });
       return;
