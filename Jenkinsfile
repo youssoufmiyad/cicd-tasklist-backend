@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent jenkins-agent-3
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('youssoufmiyad-dockerhub-password')
@@ -147,7 +147,7 @@ pipeline {
             cleanWs()
         }
         success {
-            echo 'Backend pupeline completed successfully!'
+            echo 'Backend pipeline completed successfully!'
         }
         failure {
             echo 'Backend pipeline failed!'
