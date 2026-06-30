@@ -24,7 +24,7 @@ pipeline {
 
         stage('Unit Tests') {
             steps {
-                sh 'npx prisma generate --schema-prisma/schema-test.prisma'
+                sh 'npx prisma generate --schema=prisma/schema-test.prisma'
                 sh 'npm run test:coverage'
             }
             post {
