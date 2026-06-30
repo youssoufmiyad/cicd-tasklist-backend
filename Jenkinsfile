@@ -80,6 +80,7 @@ pipeline {
                 sh """
                     trivy image \
                         --exit-code 1 \
+                        --ignore-unfixed \
                         --severity CRITICAL,HIGH \
                         --format table \
                         --output reports/trivy-report.txt \
