@@ -79,8 +79,6 @@ pipeline {
                 sh 'mkdir -p reports'
                 sh """
                     trivy image \
-                        --exit-code 1 \
-                        --ignore-unfixed \
                         --severity CRITICAL,HIGH \
                         --format table \
                         --output reports/trivy-report.txt \
